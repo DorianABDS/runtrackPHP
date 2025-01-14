@@ -10,7 +10,7 @@ for ($i = 0; $i <= 100; $i++) {
     if ($i <= 20) {
         echo "<i>$i</i><br>"; //affiche en italique
     }
-    if ($i >= 21  && $i <= 25) { //affiche de 21 à 25
+    if ($i >= 21  && $i <= 24) { //affiche de 21 à 24
         echo "$i<br>";
     }
     if ($i >= 25  && $i <= 50) { //affiche en gras
