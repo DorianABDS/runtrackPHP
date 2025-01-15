@@ -19,12 +19,20 @@ $float = 0.5;
     $tab = array($bool, $entier, $chaine, $float);
 
     $all = count($tab);
-    for ($test = 0; $test < $all; $test++) {
-        echo $tab[$test];
+    for ($i = 0; $i < $all; $i++) {
+        echo $tab[$i];
         echo "<br>";
     }
-    ?>
 
+    echo "<table border='1'>";
+    echo "<thead>";
+    echo "<tr><th>Type</th><th>Bool</th><th>Entier</th><th>Chaine</th><th>Float</th></tr>";
+    echo "</thead>";
+    echo "<tbody>";
+    echo "<tr><td>Valeur</td><td>" . $tab[0] . "</td><td>" . $tab[1] . "</td><td>" . $tab[2] . "</td><td>" . $tab[3] . "</td></tr>";
+    echo "</tbody>";
+    echo "</table>";
+    ?>
 </body>
 
 </html>
