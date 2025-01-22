@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : mer. 22 jan. 2025 à 10:10
+-- Généré le : mer. 22 jan. 2025 à 11:08
 -- Version du serveur : 9.1.0
 -- Version de PHP : 8.3.14
 
@@ -24,38 +24,6 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Structure de la table `etage`
---
-
-DROP TABLE IF EXISTS `etage`;
-CREATE TABLE IF NOT EXISTS `etage` (
-  `id` int NOT NULL AUTO_INCREMENT,
-  `nom` varchar(255) NOT NULL,
-  `numero` int NOT NULL,
-  `superficie` int NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
--- --------------------------------------------------------
-
---
--- Structure de la table `etudiants`
---
-
-DROP TABLE IF EXISTS `etudiants`;
-CREATE TABLE IF NOT EXISTS `etudiants` (
-  `id` int NOT NULL AUTO_INCREMENT,
-  `prenom` varchar(255) NOT NULL,
-  `nom` varchar(255) NOT NULL,
-  `naissance` date NOT NULL,
-  `sexe` varchar(25) NOT NULL,
-  `email` varchar(255) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
--- --------------------------------------------------------
-
---
 -- Structure de la table `salles`
 --
 
@@ -66,10 +34,21 @@ CREATE TABLE IF NOT EXISTS `salles` (
   `id_etage` int NOT NULL,
   `capacite` int NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Déchargement des données de la table `salles`
+--
+
+INSERT INTO `salles` (`nom`, `capacite`) VALUES
+('lOUNGE', 100),
+('Studio Son', 5),
+('Broadcasting', 50),
+('Bocal Peda', 4),
+('Coworking', 80),
+('Studio Video', 5);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
-
